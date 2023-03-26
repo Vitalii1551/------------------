@@ -9,14 +9,14 @@ on:
        -main
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Build and Push Docker Image
-      uses: docker/build-push-action@v2
-      with:
-       contex: .
+     runs-on: ubuntu-latest
+     steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+     - name: Build and Push Docker Image
+       uses: docker/build-push-action@v2
+       with:
+        contex: .
        file: ./Dockerfile
        push: true
        tags: ghcr.io/Vitalii1551/webinar:latest
